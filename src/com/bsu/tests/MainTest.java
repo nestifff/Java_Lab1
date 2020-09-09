@@ -10,12 +10,13 @@ class MainTest {
     @Test
     void testMain() {
 
-        double x, eps, expected, actual;
+        double x, eps;
+        double expected, actual;
 
         for (int i = -9; i <= 9; ++i) {
 
             x = i / 10;
-            eps = Math.pow(10, -i - 10);
+            eps = Math.pow(10, -i - 10)
 
             expected = Main.calculateActualValue(x);
             actual = Main.calculateTailorSeries(eps, x);
